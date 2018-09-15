@@ -1,0 +1,30 @@
+{
+  "name": "linear-algebra-calculator",
+  "version": "0.1.0",
+  "description": "An application for linear algebra calculation",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/Kouchya/linear-algebra-calculator",
+  "keywords": [
+    "math",
+    "linear algebra",
+    "algebra",
+    "calculator",
+    "matrix",
+    "vector",
+    "linear equation"
+  ],
+  "author": "Kouchya",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^2.0.0"
+  },
+  "dependencies": {
+    "algebra.js": "^0.2.6",
+    "babel-plugin-transform-es2015-modules-amd": "^6.24.1",
+    "mathjs": "^5.1.2",
+    "nodejs": "0.0.0"
+  }
+}

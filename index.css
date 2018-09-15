@@ -1,0 +1,80 @@
+.mainboard {
+	padding-top: 2em;
+	padding-bottom: 5em;
+	padding-left: 2em;
+	padding-right: 3em;
+}
+
+.sidebar {
+	padding-top: 2em;
+	padding-bottom: 5em;
+	padding-left: 1em;
+	padding-right: 2em;
+}
+
+.chinese-topic {
+	font-weight: bold;
+}
+
+.english-topic {
+	margin-top: 0.5em;
+}
+
+.matrix {
+	margin-top: 1em;
+}
+
+table.matrix {
+	table-layout: fixed;
+	border: 0;
+}
+
+.matrix td {
+	padding: 0;
+}
+
+.matrix input {
+	width: 100%;
+}
+
+label {
+	margin: 0;
+}
+
+.col-input {
+	margin-top: 0.2em;
+	width: 100%;
+}
+
+.update-matrix-button {
+	margin-top: 0.2em;
+}
+
+.calculate-buttons {
+	margin-top: 1.8em;
+}
+
+.output {
+	margin-top: 0.2em;
+	width: 100%;
+}
+
+.variable-operate {
+	margin-top: 1.8em;
+}
+
+.load-button {
+	margin-left: 0.5em;
+}
+
+.variable-name {
+	margin-top: 0.2em;
+}
+
+.varname-input {
+	width: 100%;
+}
+
+.save-hint {
+	color: #ff0000;
+}
