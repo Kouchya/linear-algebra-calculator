@@ -1,4 +1,4 @@
-# linear-algebra-calculator
+# Linear Algebra Calculator
 
 A simple offline calculator for linear algebra based on Electron.
 
