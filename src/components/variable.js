@@ -1,5 +1,7 @@
 const math = require("mathjs")
 const mat_tbl = require("../library/mat_tbl.js")
+const util = require("./doc_util.js")
+
 var vars = {}
 
 document.getElementById("save-btn").addEventListener("click", () => {
@@ -16,19 +18,7 @@ document.getElementById("save-btn").addEventListener("click", () => {
         return
     }
 
-    var matrix_table = document.getElementById("matrix")
-    var rows = matrix_table.rows.length
-    var cols = matrix_table.rows[0].cells.length
-
-    var matrix = math.zeros(rows, cols)
-    for (var i = 0; i < rows; i++) {
-        for (var j = 0; j < cols; j++) {
-            var cell = matrix_table.rows[i].cells[j]
-            var input = cell.getElementsByTagName("input")[0].value
-            input = Number(input)
-            matrix = math.subset(matrix, math.index(i, j), input)
-        }
-    }
+    const [matrix, row, col] = util.get_matrix(false)
 
     vars[varname] = matrix
 
@@ -61,18 +51,7 @@ document.getElementById("load-btn").addEventListener("click", () => {
     }
 
     matrix = vars[varname]
-    const [row, col] = matrix.size()
-    var matrix_table = document.getElementById("matrix")
-
-    mat_tbl.resize_matrix(matrix_table, row, col)
-    for (var i = 0; i < row; i++) {
-        var current_row = matrix_table.rows[i]
-        for (var j = 0; j < col; j++) {
-            var cell = matrix_table.rows[i].cells[j]
-            var input_box = cell.getElementsByTagName("input")[0]
-            input_box.value = matrix.subset(math.index(i, j))
-        }
-    }
+    util.display(matrix)
 
     document.getElementById("save-hint").innerHTML = ""
 })

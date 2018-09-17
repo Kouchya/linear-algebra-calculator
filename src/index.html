@@ -51,8 +51,20 @@
             <button type="button" class="btn btn-default" id="resize-btn">更新行列数</button>
           </form>
 
-          <form class="form-inline calculate-buttons">
+          <form class="form operate-buttons">
+            <button type="button" class="btn btn-default op-btn" id="add-calc-btn">+</button>
+            <button type="button" class="btn btn-default op-btn" id="sub-calc-btn">&dash;</button>
+            <button type="button" class="btn btn-default op-btn" id="mtp-calc-btn">&times;</button>
+            <button type="button" class="btn btn-default op-btn" id="sqr-calc-btn">&sup2;</button>
+            <button type="button" class="btn btn-default op-btn" id="cub-calc-btn">&sup3;</button>
+            <button type="button" class="btn btn-default op-btn" id="neg-calc-btn">&plusmn;</button>
+            <button type="button" class="btn btn-info op-btn" id="eql-calc-btn">=</button>
+            <button type="button" class="btn btn-danger op-btn" id="ac-btn">AC</button>
+          </form>
+
+          <form class="form calculate-buttons">
             <button type="button" class="btn btn-default" id="det-calc-btn">行列式</button>
+            <button type="button" class="btn btn-default" id="tr-calc-btn">迹</button>
           </form>
 
           <input type="text" class="form-control output" id="output" readonly>

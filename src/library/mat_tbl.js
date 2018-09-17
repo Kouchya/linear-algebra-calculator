@@ -1,6 +1,20 @@
+const except = require("./exceptions.js")
+
 module.exports = {
     resize_matrix: function(matrix, row, col)
     {
+        var regex = /^[1-9][0-9]*$/
+        if (!regex.test(row) || !regex.test(col)) {
+            throw new except.UserInputException(`我必须指出这非常诡异。——我是说，你总没见过一个行数和列数不是正整数的矩阵吧？`)
+        }
+
+        row = Number(row)
+        col = Number(col)
+
+        if (row > 6 || col > 6) {
+            throw new except.UserInputException(`这些系统个个都是事儿精，我前不久还听见它们抱怨矩阵的行数或列数大于6。真6，不是吗？`)
+        }
+
         const cell_text = '<input class="input-block-level" type="text" value="0">'
 
         var rows = matrix.rows
